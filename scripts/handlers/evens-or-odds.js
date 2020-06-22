@@ -21,11 +21,19 @@ function evensOrOddsHandler() {
     if range is 8 and the user asks for evens:
       "2, 4, 6, 8, "
     ...
-  */
+  */ 
   let listedNumbers = '';
-  for (_; _; _) {
+  let evenOrOdd;
 
+  if (displayEvens) {
+    evenOrOdd = 2;
+  } else {
+    evenOrOdd = 1;
   }
+
+  for (let i = evenOrOdd; i <= range; i += 2) {
+        listedNumbers += `${i}, `;    
+      }
   console.log('listedNumbers:', typeof listedNumbers, '\n', listedNumbers);
 
   // alert result for the user
